@@ -1,0 +1,72 @@
+{
+  "list":[
+    {
+      "icon":"music",
+      "title":"VIDEOCLIPS",
+      "description":""    
+    },
+    {
+      "icon":"corporate",
+      "title":"CORPORATE VIDEO",
+      "description":""    
+    },
+    {
+      "icon":"publi",
+      "title":"ADVERTISEMENT",
+      "description":""    
+    },
+    {
+      "icon":"rrss",
+      "title":"BRANDED CONTENT",
+      "description":""    
+    },
+    {
+      "icon":"events",
+      "title":"EVENTS",
+      "description":""    
+    },
+    {
+      "icon":"teaching",
+      "title":"FORMATIVE VIDEOS",
+      "description":""    
+    }
+  ],
+  "data":{
+    "videoclips":{
+      "icon":"music",
+      "title":"VIDEOCLIPS",
+      "description":"Do you want to promote your group? Do you want to get your music to the maximum number of people possible? Having a powerful and visually appealing video clip is the best way to make yourself known.",
+      "bulletpoints":["1","2","3","4"]    
+    },
+    "corporate_video":{
+      "icon":"corporate",
+      "title":"CORPORATE VIDEO",
+      "description":"Corporate videos are the best way to generate confidence and motivation both to use it internally and to show it at events or fairs.",
+      "bulletpoints":["1","2","3","4"]      
+    },
+    "advertisement":{
+      "icon":"publi",
+      "title":"ADVERTISEMENT",
+      "description":"Do you want to increase your acquisition of potential clients? The best way is through an advertising spot that you can use on social networks or any other channel.",
+      "bulletpoints":["1","2","3","4"]         
+    },
+    "branded_content":{
+      "icon":"rrss",
+      "title":"BRANDED CONTENT",
+      "description":"The key to being successful as a brand is the production of targeted and planned content for social media.",
+      "bulletpoints":["1","2","3","4"]      
+    },
+    "events":{
+      "icon":"events",
+      "title":"EVENTS",
+      "description":"Do you have an important event or conference on your calendar? We propose you to make a full coverage of the event so that you can use it on social networks, internally or on your website.",
+      "bulletpoints":["1","2","3","4"]         
+    },
+    "formative_videos":{
+      "icon":"teaching",
+      "title":"FORMATIVE VIDEOS",
+      "description":"Internal training can be boring and inaccessible. The best way to ensure that your employees are well trained is to make dynamic training videos that correctly capture and convey the message as closely as possible.",
+      "bulletpoints":["1","2","3","4"]       
+    }
+}
+}

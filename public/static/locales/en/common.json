@@ -1,0 +1,180 @@
+{
+    "about":{
+        "title":"ABOUT US",
+        "description":"We are Tximenea Films, a creative production company based in <b>Barcelona</b>.<br /><br />Its founders lived their childhood in a little neighborhood of Pamplona called Mendillorri. That place is known for its industrial past which left a giant chimney (aka <b>Tximenea</b>) that inspires our Name.<br /><br />We like to think of Tximenea films as an industrial chimney. <i>It doesn't STOP</i>"
+    },
+    "contact":{
+        "hello":"SAY HELLO",
+        "hello_mobile":"SAY HELLO TO",
+        "call_to_action":"We are always happy when a new project arrives, please tell us all about yours!",
+        "adress_&_telephone":"ADDRESS: C\\Francolí 65 || TELEPHONE:  +34 623 17 29 68 || +34 617 24 00 23 "
+    },
+    "notFound":{
+        "text":"Opss, this isn't the page you're looking for..."
+    },
+    "services":{
+        "title":"OUR SERVICES",
+        "service_titles":{
+            "VIDEOCLIPS":"VIDEOCLIPS",
+            "CORPORATE VIDEO":"CORPORATE VIDEOS",
+            "ADVERTISEMENT":"ADVERTISEMENT",
+            "BRANDED CONTENT":"BRANDED CONTENT",
+            "EVENTS":"EVENTS",
+            "FORMATIVE VIDEOS":"FORMATIVE VIDEOS"
+        },
+        "data":{
+            "videoclips":{
+              "icon":"music",
+              "title":"VIDEOCLIPS",
+              "description":"Do you want to promote your group? Do you want to get your music to the maximum number of people possible? Having a powerful and visually appealing video clip is the best way to make yourself known.",
+              "bulletpoints":{
+                "1":"Recording day with 1-2 cameras in the province of Barcelona.",
+                "2":"Editing and color retouching.",
+                "3":"Optional Motion Graphics.",
+                "4":"1 round of changes."
+              }  
+            },
+            "corporate_video":{
+              "icon":"corporate",
+              "title":"CORPORATE VIDEO",
+              "description":"Corporate videos are the best way to generate confidence and motivation both to use it internally and to show it at events or fairs.",
+              "bulletpoints":{
+                "1": "Recording day with 1-2 cameras in the province of Barcelona.",
+                "2": "Editing and color retouching of a 2-3 minute long video with library music.",
+                "3": "Optional Motion Graphics.",
+                "4": "1 round of changes."
+               }  
+            },
+            "advertisement":{
+              "icon":"publi",
+              "title":"ADVERTISEMENT",
+              "description":"Do you want to increase your acquisition of potential clients? The best way is through an advertising spot that you can use on social networks or any other channel.",
+              "bulletpoints":{
+                "1": "Recording day with 1-2 cameras in the province of Barcelona.",
+                "2": "Editing and color retouching of a 1´30´´ video with library music.",
+                "3": "Optional Motion Graphics.",
+                "4": "1 round of changes."
+               }     
+            },
+            "branded_content":{
+              "icon":"rrss",
+              "title":"BRANDED CONTENT",
+              "description":"The key to being successful as a brand is the production of targeted and planned content for social media.",
+              "bulletpoints":{
+                "1": "Recording material with a specific format for your channels of interest.",
+                "2": "Photo sessions to promote your brand on social media.",
+                "3": "Extreme attention and dedication to maintaining your branding in all your channels.",
+                "4": "Optional Motion Graphics."
+               }       
+            },
+            "events":{
+              "icon":"events",
+              "title":"EVENTS",
+              "description":"Do you have an important event or conference on your calendar? We propose you to make a full coverage of the event so that you can use it on social networks, internally or on your website.",
+              "bulletpoints":{
+                "1": "Recording day with 1-2 cameras in the province of Barcelona.",
+                "2": "Editing and color retouching of a 1´30´´ video with library music.",
+                "3": "Photographic coverage of the event.",
+                "4": "Optional Motion Graphics."
+               }      
+            },
+            "formative_videos":{
+              "icon":"teaching",
+              "title":"FORMATIVE VIDEOS",
+              "description":"Internal training can be boring and inaccessible. The best way to ensure that your employees are well trained is to make dynamic training videos that correctly capture and convey the message as closely as possible.",
+              "bulletpoints":{
+                "1": "Recording day with 1-2 cameras in the province of Barcelona.",
+                "2": "Editing and color retouching of a 1´30´´ video with library music.",
+                "3": "Optional Motion Graphics.",
+                "4": "1 round of changes."
+                }     
+            }
+        },
+        "go_back":"GO BACK"
+    },
+    "projects":{
+        "direction":"Direction: ",
+        "script":"Script: ",
+        "photography":"Photography: ",
+        "actors":"Actors: ", 
+        "go_back":"GO BACK",
+        "7_of_july" : {
+                "video_link":"https://www.youtube.com/embed/NHq5hgyQNko ",
+                "title":"7 OF JULY",
+                "synopsis":"A group of friends plan to get famous making youtube videos of drunk people in \"San Fermin\". Everything seems to be going well for them but strange things start to happen arround them, sadly they are too drunk to notice",
+                "cast":{
+                    "direction":"David Muela & Daniel Cascales",
+                    "script":"David Muela",
+                    "photography":"Daniel Cascales",
+                    "actors": {
+                        "Gorka García ":"(as himself), ",
+                        "Julen Aranguren ":"(as himself), ",
+                        "Andoni Pelegrí ":"(as himself), ",
+                        "David Muela ":"(as himself), ",
+                        "Daniel Casales ":"(as the cameraman), "                 
+                    }
+                }
+            },
+            "in_the_floka" : {
+                "video_link":"https://www.youtube.com/embed/kqKA42AnCNw",
+                "title":"IN THE FLOCKA",
+                "synopsis":"Pau has met a beautiful girl on the internet, but he has never seen her. Now they are going to meet in the \"Floka\". Pau will go to a parallel reality where not everything is what it seems...",
+                "cast":{
+                    "direction":"David Muela",
+                    "script":"David Muela & Julen Aranguren",
+                    "photography":"Julián Acunza",
+                    "actors": {
+                        "Toni Padilla ":"(as Dani), ",
+                        "Victoria Camps ":"(as Laia), ",
+                        "Mª Luisa Cerezo Sifas ":"(as Abuela), ",
+                        "Lorena Sierra":"(as Ana)"
+                    }
+                }
+            },
+            "toc" : {
+                "video_link":"https://www.youtube.com/embed/YPqgQeaC7VY",
+                "title":"TOC",
+                "synopsis":"Gerard suffers from a mental disorder called OCD (Obsessive-compulsive disorder), and it's been difficult for him to get a girlfiend. Today that's going to change, he has met Julia, a beautiful girl from tinder and he wont allow his OCD to get in his way!",
+                "cast":{
+                    "direction":"David Muela",
+                    "script":"David Muela",
+                    "photography":"Iñaki Gorraiz",
+                    "actors":{
+                        "Abragam asensio ":"(as Gerard), ",
+                        "Marta Domingo ":"(as Julia), ",               
+                        "Jordi Miras Molas ":"(as male OCD), ",                    
+                        "Carla Vilaró":"(as female OCD)"           
+                    }
+                }
+            },
+            "ivory_tusk" : {
+                "video_link":"https://www.youtube.com/embed/HoadGHipdUw",
+                "title":"Again - Ivory Tusk",
+                "synopsis":"Ivory Tusk is the pseudonym of Argentinian singer-songwriter Ezequiel de Lima, now based in Barcelona. The project was born as a means to a journey to explore the limits of the solo singer-songwriter persona. A troubadour who has traveled through US and Europe, he has been praised for his transparent and honest compositions, based on complex fingerpicking patterns on the acoustic guitar and thoughtful and reflective poetry.",
+                "cast":{
+                    "direction":"Julen Aranguren",
+                    "script":"Julen Aranguren & Ivory Tusk",
+                    "photography":"David Hernández",
+                    "actors": {
+                        "Ezequiel de Lima ": ", ",
+                        "Andoni Pelegrí ":", " ,                 
+                        "Julen Aranguren ": ", " ,                     
+                        "Laura Mira":", ",                    
+                        "Mauro Badía":""                      
+                    }
+                }
+            }
+        },
+        "footer":{
+            "contact": " Contact us at ",
+            "project": "! and tell us all about your project",
+            "email": "EMAIL COPIED!"
+        },
+        "navigation":{
+            "projects":"PROJECTS",
+            "services":"SERVICES",
+            "contact":"CONTACTS",
+            "about":"ABOUT"
+        }
+   
+}

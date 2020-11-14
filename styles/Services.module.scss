@@ -1,0 +1,117 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    overflow-y: scroll;
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:visited {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    &_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+    }
+
+    &_background {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+    }
+
+
+    h1 {
+        z-index: 1;
+        width: 100vw;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 5vh;
+    }
+
+    &_list {
+        max-width: 80%;
+        align-self: center;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-height: 720px) {
+
+    .services {
+
+        h1 {
+            font-size: 2rem !important;
+        }
+
+        &_list {
+            max-width: 50%;
+            align-self: center;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 1fr 1fr;
+            justify-content: space-around;
+            width: 100%;
+
+            h5 {
+                font-size: 1rem !important;
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .services {
+        justify-content: start;
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 150px;
+        }
+
+        &_list {
+            max-width: 50%;
+            grid-template-columns: 200px 200px;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .services {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        &_list {
+            grid-template-columns: 200px;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            padding-bottom: 10vh;
+        }
+    }
+}

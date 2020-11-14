@@ -1,0 +1,54 @@
+.links {
+  z-index: 10;
+  a {
+    display: block;
+    height: 45px;
+    width: 45px;
+    border-radius: 20px;
+    align-self: center;
+    margin-right: 15px;
+
+    &:hover {
+      transition: all 0.5s;
+      transform: scale(1.1)
+    }
+  }
+
+  p {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color:rgba(255, 255, 255, 0.5);
+    cursor:pointer;
+  }
+
+  &_desktop{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 1.5vw;
+    top: 3vh;
+  }
+  &_mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+  .active{
+    color:white !important;
+  }
+  
+  .insta{
+    background-image: url(/static/icons/logo_insta.png);
+    background-position: center;
+    font-size: 0;
+  }
+  
+  .linkedin{
+    background-image: url(/static/icons/logo_linkedin.png);
+    background-position: center;
+    font-size: 0;
+  }
+
+  
