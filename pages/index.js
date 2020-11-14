@@ -38,7 +38,7 @@ function Projects({t, pages}) {
         <title>Tximenea Films || Projects</title>
         <description name="description" content="Tximenea Films is a production company set in Barcelona making commercials, short films and music videos since 2020."/>
       </Head>
-      
+  
       <section>
         <BrowserView viewClassName={styles.carrousel}>
           <div className={currentPage === 0 ? styles.carrousel_noClick : styles.carrousel_prev} onClick={() => paginate(-1)}/>
@@ -84,7 +84,7 @@ function Projects({t, pages}) {
                 opacity: { duration: 0.65 }
               }}
               >{page.title === "" ? "COMING SOON" : page.title}</motion.h1>
-          <div className={styles.carrousel_mobile_next} onClick={() => {currentPage === pageTotal ? setPage([0,1]) : paginate(1)}}></div>
+          <div className={styles.carrousel_mobile_arrow} onClick={() => {currentPage === pageTotal ? setPage([0,1]) : paginate(1)}}></div>
         </MobileView>    
         <BackgroundVideo src={isBrowser ? page.video : page.video_mobile} key={isBrowser ? page.video : page.video_mobile}/>
       </section>

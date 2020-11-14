@@ -101,7 +101,7 @@
         z-index: 3;
     }
 
-    &_next{
+    &_arrow{
         z-index: 5;
         position: absolute;
         bottom: 7.5vh;
@@ -112,6 +112,7 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+
 
     &_title {
         z-index: 1;
