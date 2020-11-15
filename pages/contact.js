@@ -12,7 +12,7 @@ function Contact({t}) {
   const [isCopied, setIsCopied] = useState(false)
 
   const [contact, setContact] = useState({
-    name: 'Tximenea Films',
+    name: '',
     email: 'tximenea.films@gmail.com',
     subject: 'Tximenea web - Contact',
     honeypot: '', 

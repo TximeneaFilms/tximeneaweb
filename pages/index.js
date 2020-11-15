@@ -1,37 +1,8 @@
-import { useState } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import styles from '../styles/Projects.module.scss'
-import BackgroundVideo from '../components/backgroundVideo/backgroundVideo.js'
 import { withTranslation } from '../i18n'
-import { motion } from "framer-motion"
-import { BrowserView, MobileView, isBrowser} from 'react-device-detect'
+import Carrousel from '../components/carrousel/carrousel.js'
 
-const variants = {
-  enter: (direction) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-};
-
-function Projects({t, pages}) {
-
-  const [[currentPage, direction ], setPage ] = useState([0, 1]);
-  const page = pages[currentPage]
-  const pageTotal = pages.length - 1;
-
-  const paginate = (newDirection) => {
-    setPage([currentPage + newDirection, newDirection]);
-  };
-
+function Projects({pages}) {
   return (
     <>
       <Head>
@@ -40,53 +11,7 @@ function Projects({t, pages}) {
       </Head>
   
       <section>
-        <BrowserView viewClassName={styles.carrousel}>
-          <div className={currentPage === 0 ? styles.carrousel_noClick : styles.carrousel_prev} onClick={() => paginate(-1)}/>
-          <motion.h1 
-          key={currentPage} 
-          className={styles.carrousel_title} 
-          initial={{scale:.75, y: 250, opacity:0}} 
-          animate={{scale:1, y: 0, opacity:1}}
-          transition={{
-            y: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.65 }
-          }}
-          >{page.title}</motion.h1>
-          <Link href={"/projects/" + page.link}>
-              <motion.a  
-                key={currentPage}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit={{scale:2}}
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                  scale:{ duration: 3 },
-                }}>
-                <Image src={"" + page.image} alt={"image"} className={styles.carrousel_image} width={750} height={450} quality={100} key={page.image}/>
-              </motion.a>
-          </Link>
-          <div className={currentPage === pageTotal ? styles.carrousel_noClick : styles.carrousel_next} onClick={() => paginate(1)}/>   
-        </BrowserView>   
-        <MobileView viewClassName={styles.carrousel_mobile}>
-          <Link href={"/projects/" + page.link}>
-            <a></a>
-          </Link>
-          <motion.h1 
-              key={currentPage} 
-              className={styles.carrousel_mobile_title} 
-              initial={{scale:.75, y: 250, opacity:0}} 
-              animate={{scale:1, y: 0, opacity:1}}
-              transition={{
-                y: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.65 }
-              }}
-              >{page.title === "" ? "COMING SOON" : page.title}</motion.h1>
-          <div className={styles.carrousel_mobile_arrow} onClick={() => {currentPage === pageTotal ? setPage([0,1]) : paginate(1)}}></div>
-        </MobileView>    
-        <BackgroundVideo src={isBrowser ? page.video : page.video_mobile} key={isBrowser ? page.video : page.video_mobile}/>
+        <Carrousel pages={pages}/>
       </section>
     </>
   )
