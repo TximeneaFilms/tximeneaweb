@@ -6,17 +6,60 @@ import { withTranslation } from '../i18n'
 import BackgroundVideo from '../components/backgroundVideo/backgroundVideo.js'
 import styles from '../styles/Contact.module.scss'
 import { motion } from "framer-motion"
-import { useForm } from '@formspree/react';
 
 function Contact({t}) {
 
   const [isCopied, setIsCopied] = useState(false)
-  const [state, handleSubmit] = useForm('https://formspree.io/f/xwkwqqpv');
 
-  if (state.succeeded) {
-    return <div>Thank you for signing up!</div>;
-  }
+  const [contact, setContact] = useState({
+    name: 'Tximenea Films',
+    email: 'hello@tximeneafilms.com',
+    subject: 'Tximenea web - Contact',
+    honeypot: '', 
+    message: '',
+    replyTo: '@', 
+    accessKey: '6c5ac567-0a76-4689-a249-13a6596c506d' 
+  });
 
+  const [response, setResponse] = useState({
+    type: '',
+    message: ''
+  });
+
+  const handleChange = e =>
+    setContact({ ...contact, [e.target.name]: e.target.value });
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    try {
+      const res = await fetch('https://api.staticforms.xyz/submit', {
+        method: 'POST',
+        body: JSON.stringify(contact),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      const json = await res.json();
+
+      if (json.success) {
+        setResponse({
+          type: 'success',
+          message: 'Thank you for reaching out to us.'
+        });
+      } else {
+        setResponse({
+          type: 'error',
+          message: json.message
+        });
+      }
+    } catch (e) {
+      console.log('An error occurred', e);
+      setResponse({
+        type: 'error',
+        message: 'An error occured while submitting the form'
+      });
+    }
+  };
+  
   return (
     <>
       <Head>
@@ -42,15 +85,12 @@ function Contact({t}) {
             <h2>{t("contact.hello_mobile")}</h2><div className="mail_icon"></div><h1>HELLO@TXIMENEAFILMS.COM</h1>
           </MobileView>
           <h3>{t("contact.call_to_action")}</h3>
-          <form onSubmit={handleSubmit} className={styles.contact_form}>
+          <form action='https://api.staticforms.xyz/submit' method='post' onSubmit={handleSubmit} className={styles.contact_form}>
             <label htmlFor="email" >Email</label>
-            <input placeholder={t("contact.email_placeholder")} id="email" type="email" name="email" className={styles.contact_form_field}/>
+            <input placeholder={t("contact.email_placeholder")} id="email" type="email" name="email" className={styles.contact_form_field} onChange={handleChange}/>
             <label htmlFor="message">{t("contact.message_label")}</label>
-            <textarea placeholder={t("contact.message_placeholder")} id="message" type="text" name="message" className={`${styles.contact_form_field} ${styles.contact_form_field_message}`} cols="10" rows="5"/>
-            <button type="submit" disabled={state.submitting}>{t("contact.send")}</button>
-            {state.submitting ? <div style={{marginTop:"10px"}}>{t("contact.submiting")} </div> : ""}
-            {state.succeeded ? <div style={{marginTop:"10px", color:"#43c63f"}}>{t("contact.succeeded")} </div> : ""}
-            {state.errors.length ? <div style={{marginTop:"10px", color:"#c63f3f"}}>{t("contact.error")}</div> : ""}
+            <textarea placeholder={t("contact.message_placeholder")} id="message" type="text" name="message" className={`${styles.contact_form_field} ${styles.contact_form_field_message}`} cols="10" rows="5" onChange={handleChange}/>
+            <button type="submit">{t("contact.send")}</button>
           </form>
         </div>
         <BackgroundVideo src="/static/videos/contact/background_video.m4v"/>

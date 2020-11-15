@@ -10,7 +10,6 @@ import NProgress from 'nprogress'
 import Router from 'next/router';
 import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
-import { FormspreeProvider } from '@formspree/react';
 
 Router.events.on('routeChangeStart', () => {NProgress.start()})
 Router.events.on('routeChangeComplete', () => NProgress.done())
@@ -33,11 +32,9 @@ function Tximenea({ Component, pageProps }) {
   return (
       <main className="App">
         <Navigation/>
-        <FormspreeProvider project="Tximenea web">
           <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} />
           </AnimatePresence>
-        </FormspreeProvider>
         <BrowserView>
         <SocialLinks/>
         </BrowserView>
