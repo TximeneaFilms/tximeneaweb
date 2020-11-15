@@ -7,7 +7,13 @@
         "hello":"SAY HELLO",
         "hello_mobile":"SAY HELLO TO",
         "call_to_action":"We are always happy when a new project arrives, please tell us all about yours!",
-        "adress_&_telephone":"ADDRESS: C\\Francolí 65 || TELEPHONE:  +34 623 17 29 68 || +34 617 24 00 23 "
+        "message_label":"Message:",
+        "email_placeholder":"Your email adress",
+        "message_placeholder":"Tell us all about your project here!",
+        "send":"SEND",
+        "submiting":"Sending email...",
+        "succeeded":"Thanks for reaching out!",
+        "error":"Something has gone wrong..."
     },
     "notFound":{
         "text":"Opss, this isn't the page you're looking for..."

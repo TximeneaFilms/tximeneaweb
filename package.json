@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "framer-motion": "^2.9.4",
     "next": "10.0.1",
     "next-i18next": "^7.0.1",

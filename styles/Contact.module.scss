@@ -32,6 +32,7 @@
         }
       }
     }
+
   }
 
   &_description {
@@ -63,6 +64,59 @@
       color: #FF9900;
       font-size: 1.7rem;
     }
+  }
+
+  &_form{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    label{
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    &_field{
+      max-width: 250px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: solid transparent 2px;
+      background-color: rgba(228, 228, 228, 0.5);
+
+      &::placeholder{
+        color:black
+      }
+
+      &:focus{
+        background-color: rgba(228, 228, 228, 0.8);
+        border: solid #FF9900 2px;
+      }
+
+      
+    &_message{
+      resize: vertical;
+      max-width: 60%;
+    }
+    }
+
+    button{
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 5px 50px;
+      align-self: start;
+      background-color: #101010;
+      transition: all .2s;
+      border: none;
+      color: white;
+      &:hover{
+        background-color: #FF9900;
+        color: #101010;
+      }
+    }
+
   }
 }
 
@@ -97,6 +151,10 @@
         font-size: 4rem;
       }
     }
+      &_form_field_message{
+        max-width: 100%;
+      }
+
   }
 }
 

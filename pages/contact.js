@@ -6,10 +6,16 @@ import { withTranslation } from '../i18n'
 import BackgroundVideo from '../components/backgroundVideo/backgroundVideo.js'
 import styles from '../styles/Contact.module.scss'
 import { motion } from "framer-motion"
+import { useForm } from '@formspree/react';
 
 function Contact({t}) {
 
   const [isCopied, setIsCopied] = useState(false)
+  const [state, handleSubmit] = useForm('https://formspree.io/f/xwkwqqpv');
+
+  if (state.succeeded) {
+    return <div>Thank you for signing up!</div>;
+  }
 
   return (
     <>
@@ -36,7 +42,16 @@ function Contact({t}) {
             <h2>{t("contact.hello_mobile")}</h2><div className="mail_icon"></div><h1>HELLO@TXIMENEAFILMS.COM</h1>
           </MobileView>
           <h3>{t("contact.call_to_action")}</h3>
-          <h4>{t("contact.adress_&_telephone")}</h4>
+          <form onSubmit={handleSubmit} className={styles.contact_form}>
+            <label htmlFor="email" >Email</label>
+            <input placeholder={t("contact.email_placeholder")} id="email" type="email" name="email" className={styles.contact_form_field}/>
+            <label htmlFor="message">{t("contact.message_label")}</label>
+            <textarea placeholder={t("contact.message_placeholder")} id="message" type="text" name="message" className={`${styles.contact_form_field} ${styles.contact_form_field_message}`} cols="10" rows="5"/>
+            <button type="submit" disabled={state.submitting}>{t("contact.send")}</button>
+            {state.submitting ? <div style={{marginTop:"10px"}}>{t("contact.submiting")} </div> : ""}
+            {state.succeeded ? <div style={{marginTop:"10px", color:"#43c63f"}}>{t("contact.succeeded")} </div> : ""}
+            {state.errors.length ? <div style={{marginTop:"10px", color:"#c63f3f"}}>{t("contact.error")}</div> : ""}
+          </form>
         </div>
         <BackgroundVideo src="/static/videos/contact/background_video.m4v"/>
       </motion.section>
