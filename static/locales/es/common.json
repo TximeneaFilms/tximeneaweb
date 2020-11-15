@@ -7,7 +7,13 @@
         "hello":"DI HOLA",
         "hello_mobile":"DI HOLA A",
         "call_to_action":"Siempre nos alegra que nos habléis de vuestros proyectos, por favor no dudéis en contarnos el vuestro!",
-        "adress_&_telephone":"DIRECCIÓN: C\\Francolí 65 || TELÉFONO:  +34 623 17 29 68 || +34 617 24 00 23 "
+        "message_label":"Mensaje:",
+        "email_placeholder":"Tu dirección email",
+        "message_placeholder":"Cuéntanos todo sobre tu projecto aqui!",
+        "send":"ENVIAR",
+        "submiting":"Enviando email...",
+        "succeeded":"Gracias por contáctarnos!",
+        "error":"Algo ha ido mal..."
     },
     "notFound":{
         "text":"Opss, esta no es la página que andas buscando..."
