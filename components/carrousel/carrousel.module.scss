@@ -103,7 +103,7 @@
         &_next{
             z-index: 5;
             position: absolute;
-            bottom: 7.5vh;
+            bottom: 10vh;
             height: 50px;
             width: 100vw;
             background: transparent;
@@ -112,6 +112,12 @@
             background-size: contain;
             background-repeat: no-repeat;
             border: none;
+            &:focus {     
+                border: none;
+            }
+            &:active {     
+                border: none;
+            }
         }
     
     
