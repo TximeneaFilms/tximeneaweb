@@ -113,10 +113,10 @@
             background-repeat: no-repeat;
             border: none;
             &:focus {     
-                outline: none;
+                outline: none !important;
             }
             &:active {     
-                outline: none;
+                outline: none !important;
             }
         }
     
