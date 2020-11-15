@@ -13,12 +13,12 @@ function Contact({t}) {
 
   const [contact, setContact] = useState({
     name: 'Tximenea Films',
-    email: 'hello@tximeneafilms.com',
+    email: 'tximenea.films@gmail.com',
     subject: 'Tximenea web - Contact',
     honeypot: '', 
     message: '',
     replyTo: '@', 
-    accessKey: '6c5ac567-0a76-4689-a249-13a6596c506d' 
+    accessKey: '3f065880-436d-4cc4-a61d-7665881b34e1' 
   });
 
   const [response, setResponse] = useState({
