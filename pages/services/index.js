@@ -14,7 +14,7 @@ function Services({t, particles_config, services_data, icons}) {
   return (
     <>
       <Head>
-        <title>Tximenea Films</title>
+        <title>Tximenea Films || Services</title>
         <description name="description" content="At Tximenea Films we provide a great variety of services as videoclips, corporate videos, event coverage, photo sessions and more!"/>
       </Head>
 

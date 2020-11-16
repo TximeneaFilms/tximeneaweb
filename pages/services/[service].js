@@ -19,7 +19,7 @@ function Service({t, particles_config, services_data, icons}) {
     return (
         <>
         <Head>
-          <title>{"Tximenea Films | " + service.title.charAt(0) + service.title.toLowerCase().slice(1)}</title>
+          <title>{"Tximenea Films || " + service.title.charAt(0) + service.title.toLowerCase().slice(1)}</title>
           <description name="description" content={service.description}/>
         </Head>
 
