@@ -15,7 +15,7 @@ function Services({t, particles_config, services_data, icons}) {
     <>
       <Head>
         <title>Tximenea Films || Services</title>
-        <description name="description" content="At Tximenea Films we provide a great variety of services as videoclips, corporate videos, event coverage, photo sessions and more!"/>
+        <description name="description" content="En Tximenea films ofrecemos una gran variedad de servicios de producción audiovisual: Videoclips, anuncios, cortometrajes y videos corporativos!"/>
       </Head>
 
       <motion.section className={styles.services}

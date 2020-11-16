@@ -10,7 +10,7 @@ function About({t}) {
     <>
       <Head>
         <title>Tximenea Films || About</title>
-        <description name="description" content="Founded by passionate filmmakers, tximenea stands for quality an creative visual products"/>
+        <description name="description" content="Fundado por personas apasionadas por lo audiovisual, el sentido de la estética y el pensamiento de marca"/>
       </Head>
 
       <motion.section className={isBrowser ? styles.about : styles.about_mobile} 

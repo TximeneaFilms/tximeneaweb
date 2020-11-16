@@ -7,7 +7,7 @@ function Projects({pages}) {
     <>
       <Head>
         <title>Tximenea Films</title>
-        <description name="description" content="Tximenea Films is a creative production company set in Barcelona making commercials, short films and videoclips."/>
+        <description name="description" content="Tximenea films es una productora audiovisual creativa de Barcelona, dedicada a hacer videoclips, anuncios, cortometrajes y vídeos corporativos"/>
       </Head>
 
   

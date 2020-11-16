@@ -64,7 +64,7 @@ function Contact({t}) {
     <>
       <Head>
         <title>Tximenea Films || Contact</title>
-        <description name="description" content="Tell us about your project at hello@tximeneafilms.com of call the +34 623 17 29 68 || +34 617 24 00 23 "/>
+        <description name="description" content="Cuéntanos todo sobre tu proyecto en hello@tximeneafilms.com o llama al +34 623 17 29 68 || +34 617 24 00 23 "/>
       </Head>
 
       <motion.section className={isBrowser ? styles.contact : styles.contact_mobile}
