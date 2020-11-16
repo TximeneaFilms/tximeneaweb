@@ -10,7 +10,6 @@ function Projects({pages}) {
         <description name="description" content="Tximenea Films is a creative production company set in Barcelona making commercials, short films and videoclips."/>
       </Head>
 
-      "Tximenea Films es una productor"
   
       <section>
         <Carrousel pages={pages}/>
