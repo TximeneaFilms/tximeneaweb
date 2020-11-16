@@ -6,8 +6,8 @@ function Projects({pages}) {
   return (
     <>
       <Head>
-        <title>Tximenea Films || Projects</title>
-        <description name="description" content="Tximenea Films is a production company set in Barcelona making commercials, short films and music videos since 2020."/>
+        <title>Tximenea Films</title>
+        <description name="description" content="Tximenea Films is a production company set in Barcelona making commercials, short films and videoclips."/>
       </Head>
   
       <section>

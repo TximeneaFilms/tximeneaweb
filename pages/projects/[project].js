@@ -18,7 +18,7 @@ function Project({t, particles_config, projects_data}) {
   return (
     <>
       <Head>
-        <title>{"Tximenea Films | " + project.title.charAt(0) + project.title.toLowerCase().slice(1)}</title>
+        <title>{"Tximenea Films || Projects " + project.title.charAt(0) + project.title.toLowerCase().slice(1)}</title>
         <description name="description" content={project.synopsis}/>
       </Head>
 
