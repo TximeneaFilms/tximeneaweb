@@ -44,22 +44,29 @@ function Carrousel({pages}) {
               opacity: { duration: 0.65 }
             }}
           >{page.title}</motion.h1>
-          <Link href={"/projects/" + page.link}>
-            <motion.a
-              key={currentPage + "_desktop"}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit={{ scale: 2 }}
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 },
-                scale: { duration: 3 },
-              }}>
-              <Image src={"" + page.image} alt={"image"} className={styles.carrousel_desktop_image} width={750} height={450} quality={100} key={page.image} />
-            </motion.a>
-          </Link>
+          <div style={{zIndex:1}}>
+            <Link href={"/projects/" + page.link}>
+              <motion.a
+                key={currentPage + "_desktop"}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit={{ scale: 2 }}
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.2 },
+                  scale: { duration: 3 },
+                }}>
+                <Image src={"" + page.image} alt={"image"} className={styles.carrousel_desktop_image} width={750} height={450} quality={30} key={page.image} />
+              </motion.a>
+            </Link>
+            <div className={styles.carrousel_desktop_pageDisplay}>
+                  <div className={currentPage === 0 ? styles.carrousel_desktop_pageDisplay_arrow_noDisplay : `${styles.carrousel_desktop_pageDisplay_arrow} ${styles.carrousel_desktop_pageDisplay_arrow_back}`} onClick={() => paginate(-1)} ></div>
+                  {pages.map((page, index) => <div className={ currentPage != index ? styles.carrousel_desktop_pageDisplay_item : `${styles.carrousel_desktop_pageDisplay_item} ${styles.carrousel_desktop_pageDisplay_item_active}` } key={ "page_" + index } onClick={() => setPage([index,1])} ></div>)}
+                  <div className={currentPage === pageTotal ? styles.carrousel_desktop_pageDisplay_arrow_noDisplay : `${styles.carrousel_desktop_pageDisplay_arrow} ${styles.carrousel_desktop_pageDisplay_arrow_next}`} onClick={() => paginate(1)} ></div>
+            </div>
+          </div>
           <div className={currentPage === pageTotal ? styles.carrousel_desktop_noClick : styles.carrousel_desktop_next} onClick={() => paginate(1)} key={"next_desktop"} />
         </BrowserView>
         <MobileView viewClassName={styles.carrousel_mobile}>

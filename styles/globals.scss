@@ -121,12 +121,28 @@ a:active {
 .insta{
   background-image: url(/static/icons/logo_insta.png);
   background-position: center;
+  background-size: contain;
   font-size: 0;
 }
 
 .linkedin{
   background-image: url(/static/icons/logo_linkedin.png);
   background-position: center;
+  background-size: contain;
+  font-size: 0;
+}
+
+.twitter{
+  background-image: url(/static/icons/logo_twitter.png);
+  background-position: center;
+  background-size: contain;
+  font-size: 0;
+}
+
+.facebook{
+  background-image: url(/static/icons/logo_facebook.png);
+  background-position: center;
+  background-size: contain;
   font-size: 0;
 }
 

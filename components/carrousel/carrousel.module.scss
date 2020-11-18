@@ -9,6 +9,67 @@
     overflow: hidden;
     position: absolute;
 
+    &_pageDisplay{
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+
+        &_item{
+            background-color: rgba(255, 255, 255, 0.344);
+            height: 10px;
+            width: 10px;
+            border-radius: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all .5s;
+
+            &:hover{
+                background-color: #ffffff;
+            }
+
+            &_active{
+                background-color: #FF9900;
+            }
+        }
+
+        &_arrow{
+
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            margin: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: all .3s;
+
+            &_back{  
+                background-image: url('/static/icons/prev_arrow.png');
+                &:hover{
+                    transform: translateX(-5px);
+                }
+            }
+
+            &_next{           
+                background-image: url('/static/icons/next_arrow.png');
+                &:hover{
+                    transform: translateX(5px);
+                }
+            }
+
+            &_noDisplay{
+                height: 20px;
+                width: 20px;
+                margin: 10px;
+                pointer-events: none;
+                opacity: 0;
+            }
+        }
+    }
+
     &_prev {
         z-index: 1;
         height: 100vh;
