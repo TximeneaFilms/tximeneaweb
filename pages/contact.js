@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import Head from 'next/head'
 import { BrowserView, MobileView, isBrowser } from "react-device-detect";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 function Contact({t}) {
 
   const [isCopied, setIsCopied] = useState(false)
+  const form = useRef(null);
 
   const [contact, setContact] = useState({
     name: '',
@@ -26,11 +27,16 @@ function Contact({t}) {
     message: ''
   });
 
+  const[ status, setStatus ] = useState("")
+
   const handleChange = e =>
     setContact({ ...contact, [e.target.name]: e.target.value });
 
   const handleSubmit = async e => {
     e.preventDefault();
+
+    setStatus("submit")
+
     try {
       const res = await fetch('https://api.staticforms.xyz/submit', {
         method: 'POST',
@@ -45,6 +51,9 @@ function Contact({t}) {
           type: 'success',
           message: 'Thank you for reaching out to us.'
         });
+
+        setStatus("success")
+        form.current.reset()
       } else {
         setResponse({
           type: 'error',
@@ -57,6 +66,8 @@ function Contact({t}) {
         type: 'error',
         message: 'An error occured while submitting the form'
       });
+
+      setStatus("error")
     }
   };
   
@@ -85,13 +96,16 @@ function Contact({t}) {
             <h2>{t("contact.hello_mobile")}</h2><div className="mail_icon"></div><h1>HELLO@TXIMENEAFILMS.COM</h1>
           </MobileView>
           <h3>{t("contact.call_to_action")}</h3>
-          <form action='https://api.staticforms.xyz/submit' method='post' onSubmit={handleSubmit} className={styles.contact_form}>
+          <form action='https://api.staticforms.xyz/submit' method='post' onSubmit={handleSubmit} className={styles.contact_form} ref={form}>
             <label htmlFor="email" >Email</label>
             <input placeholder={t("contact.email_placeholder")} id="email" type="email" name="email" className={styles.contact_form_field} onChange={handleChange}/>
             <label htmlFor="message">{t("contact.message_label")}</label>
             <textarea placeholder={t("contact.message_placeholder")} id="message" type="text" name="message" className={`${styles.contact_form_field} ${styles.contact_form_field_message}`} cols="10" rows="5" onChange={handleChange}/>
             <button type="submit">{t("contact.send")}</button>
           </form>
+          {status === "submit" ? <p>{t("contact.submiting")}</p> : ""}
+          {status === "success" ? <p>{t("contact.succeeded")}</p> : ""}
+          {status === "error" ? <p>{t("contact.error")}</p> : ""}
         </div>
         <BackgroundVideo src="/static/videos/contact/background_video.m4v"/>
       </motion.section>
