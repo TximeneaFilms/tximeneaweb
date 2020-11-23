@@ -19,12 +19,12 @@ export default class CustomDocument extends Document {
           <meta name="apple-mobile-web-app-status-bar-style" content="#101010"/>
           <meta itemprop="name" content="Tximenea Films"/>
           <meta itemprop="description" content="Tximenea Films is a production company set in Barcelona making commercials, short films and music videos since 2020."/>
-          <meta itemprop="image" content="https://drive.google.com/file/d/1BoD6r4z3-fUD22-7mmbDdFltuE6wOOfA/view?usp=sharing"/>
+          <meta itemprop="image" content="https://drive.google.com/uc?id=1BoD6r4z3-fUD22-7mmbDdFltuE6wOOfA"/>
           <meta property="og:type" content="website"/>
           <meta property="og:title" content="Tximenea Films"/>
           <meta property="og:url" content="https://tximeneafilms.com"/>
           <meta property="og:site_name" content="Tximenea Films"/>
-          <meta property="og:image" content="https://drive.google.com/file/d/1BoD6r4z3-fUD22-7mmbDdFltuE6wOOfA/view?usp=sharing"/>
+          <meta property="og:image" content="https://drive.google.com/uc?id=1BoD6r4z3-fUD22-7mmbDdFltuE6wOOfA"/>
           <meta property="og:description" content="Tximenea Films is a production company set in Barcelona making commercials, short films and music videos since 2020."/>
           <meta property="og:locale" content="en_US"/>
           <meta property="fb:app_id" content="Tximenea Films"/>
