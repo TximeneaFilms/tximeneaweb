@@ -103,6 +103,7 @@
         "script":"Guión: ",
         "photography":"Fotografía: ",
         "actors":"Actores: ", 
+        "participants":"Participantes: ",
         "go_back":"IR ATRÁS",
         "7_of_july" : {
                 "video_link":"https://www.youtube.com/embed/NHq5hgyQNko ",
@@ -167,6 +168,28 @@
                         "Julen Aranguren ": ", " ,                     
                         "Laura Mira":", ",                    
                         "Mauro Badía":""                      
+                    }
+                }
+            },
+            "referents" : {
+                "video_link":"https://www.youtube.com/embed/ROdK0Y0PBDA",
+                "title":"REFERENTS EN LIDERATGE",
+                "synopsis":"Siempre se habla de que necesitamos referentes. Quien les brinda? La gran mayoría de los golpes el cine. A veces no nos damos cuenta de que a nuestro alrededor estamos rodeadas de referentes y en este caso, la sororidad y la fuerza de las 10 mujeres protagonistas no sólo hacen referente su municipio, Maçanet de la Selva, sino que empoderan a la espectadora que el vea e inspira a cualquier niña, que sea cual sea la disciplina a la que se quiera dedicar, que puede conseguirlo.",
+                "cast":{
+                    "direction":"Gisela Lardin Morales",
+                    "script":"Laura Yanina Roine",
+                    "photography":"Ferran Hernández",
+                    "actors": {
+                        "Marisol León ": ", ",
+                        "Alba Romaguera ":", " ,                 
+                        "Aida Puntí ": ", " ,                     
+                        "Núria de Gil ":", ",                    
+                        "Isabel Herraiz ":"",  
+                        "Iolanda La Piedra ":"", 
+                        "Judit Viader ":"", 
+                        "Natàlia Figueras ":"", 
+                        "Carmen del Toro ":"", 
+                        "Anna Prats ":""                   
                     }
                 }
             }

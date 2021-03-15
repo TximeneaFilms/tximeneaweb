@@ -23,6 +23,13 @@ export async function getStaticProps() {
     props:{
       pages:[
         {
+          title:"REFERENTS",
+          image:"/static/images/carrousel/referents.png",
+          video:'/static/videos/carrousel/referents.mp4',
+          video_mobile:'/static/videos/carrousel/mobile/referents.mp4',
+          link:"referents"
+        },
+        {
           title:"IN THE FLOKA",
           image:"/static/images/carrousel/floka.png",
           video:'/static/videos/carrousel/floka.mp4',

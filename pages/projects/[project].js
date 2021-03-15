@@ -63,7 +63,7 @@ function Project({t, particles_config, projects_data}) {
             <li><b>{t("projects.direction")}</b>{t("projects." + projectName + ".cast.direction")}</li>
             <li><b>{t("projects.script")}</b>{t("projects." + projectName + ".cast.script")}</li>
             <li><b>{t("projects.photography")}</b>{t("projects." + projectName + ".cast.photography")}</li>
-            <li><b>{t("projects.actors")}</b>{project.cast.actors.map((actor => actor.name + t("projects." + projectName + ".cast.actors." + actor.name)))}</li>
+            <li><b>{projectName === "referents" ? t("projects.participants") : t("projects.actors")}</b>{project.cast.actors.map((actor => actor.name + t("projects." + projectName + ".cast.actors." + actor.name)))}</li>
           </ul>
         </motion.div>
         {isBrowser ? <Particles params={particles_config} className={styles.project_background}/> : ""}
@@ -88,6 +88,7 @@ export async function getStaticPaths() {
           {params: { project: 'in_the_floka' } },
           {params: { project: 'toc' } },
           {params: { project: 'ivory_tusk' } },
+          {params: { project: 'referents' } },
       ],
       fallback: false,
     }

@@ -101,6 +101,48 @@
                         }
                     ]
                 }
+            },
+            "referents" : {
+                "video_link":"https://www.youtube.com/embed/ROdK0Y0PBDA",
+                "title":"REFERENTS EN LIDERATGE",
+                "synopsis":"It is always said that we need references. Who gives them? The vast majority of times the cinema. Sometimes we do not realize that around us we are surrounded by references and in this case, the sorority and strength of the 10 women protagonists not only make their municipality, Maçanet de la Selva, a reference, but they empower the viewer that the see and inspire any girl, whatever discipline she wants to pursue, who can achieve it.",
+                "cast":{
+                    "direction":"Gisela Lardin Morales",
+                    "script":"Laura Yanina Roine",
+                    "photography":"Ferran Hernández",
+                    "actors":[
+                        {"name":"Marisol León ",
+                         "role":", "
+                        },
+                        {"name":"Alba Romaguera ",
+                         "role":", "
+                        },
+                        {"name":"Aida Puntí ",
+                         "role":", "
+                        },
+                        {"name":"Núria de Gil ",
+                            "role":", "
+                        },
+                        {"name":"Isabel Herraiz ",
+                            "role":""
+                        },
+                        {"name":"Iolanda La Piedra ",
+                            "role":""
+                        },
+                        {"name":"Judit Viader ",
+                            "role":""
+                        },
+                        {"name":"Natàlia Figueras ",
+                            "role":""
+                        },
+                        {"name":"Carmen del Toro ",
+                            "role":""
+                        },
+                        {"name":"Anna Prats ",
+                            "role":""
+                        }
+                    ]
+                }
             }
         }
 }
