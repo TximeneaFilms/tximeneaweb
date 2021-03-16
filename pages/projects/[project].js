@@ -61,7 +61,8 @@ function Project({t, particles_config, projects_data}) {
           <div className={isBrowser ? "project_description_synopsis" : "project_description_synopsis_mobile"}>{t("projects." + projectName +".synopsis")}</div>
           <ul className={styles.project_description_cast}>
             <li><b>{t("projects.direction")}</b>{t("projects." + projectName + ".cast.direction")}</li>
-            <li><b>{t("projects.script")}</b>{t("projects." + projectName + ".cast.script")}</li>
+            <li><b>{projectName === "referents" ? t("projects.edition") : t("projects.script")}</b>{t("projects." + projectName + ".cast.script")}</li>
+            {projectName === "referents" && <li><b>{t("projects.production")}</b>{t("projects." + projectName + ".cast.production")}</li>}
             <li><b>{t("projects.photography")}</b>{t("projects." + projectName + ".cast.photography")}</li>
             <li><b>{projectName === "referents" ? t("projects.participants") : t("projects.actors")}</b>{project.cast.actors.map((actor => actor.name + t("projects." + projectName + ".cast.actors." + actor.name)))}</li>
           </ul>
