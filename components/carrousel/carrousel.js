@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from './carrousel.module.scss'
 import BackgroundVideo from '../backgroundVideo/backgroundVideo.js'
 import { motion } from "framer-motion"
+import { p } from '../../lib/path'
 
 const variants = {
     enter: (direction) => {
@@ -56,7 +57,7 @@ function Carrousel({pages}) {
                   opacity: { duration: 0.2 },
                   scale: { duration: 3 },
                 }}>
-                <img src={page.image} alt={"image"} className={styles.carrousel_desktop_image} width={750} height={450} key={page.image} />
+                <img src={p(page.image)} alt={"image"} className={styles.carrousel_desktop_image} width={750} height={450} key={page.image} />
               </motion.a>
             </Link>
             <div className={styles.carrousel_desktop_pageDisplay}>
