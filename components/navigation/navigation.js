@@ -23,10 +23,9 @@ function Navigation({ t }) {
             <Link
               href={item === "projects" ? "/" : "/" + item}
               key={index}
+              className={activePage === item ? styles.active : ""}
               >
-                <a className={activePage === item ? styles.active : ""}>
-                  {t("navigation." + item)}
-                </a>
+                {t("navigation." + item)}
             </Link >)
         }
       </nav>
@@ -41,10 +40,10 @@ function Navigation({ t }) {
             <Link
               href={item === "projects" ? "/" : "/" + item}
               key={index}
+              className={activePage === item ? styles.active : ""}
+              onClick={() => toggleOpen(false)}
               >
-                <a className={activePage === item ? styles.active : ""} onClick={() => toggleOpen(false)}>
-                  {t("navigation." + item)}
-                </a>
+                {t("navigation." + item)}
             </Link >)
         }
         <SocialLinks/>

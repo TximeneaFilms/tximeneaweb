@@ -44,7 +44,7 @@ function Carrousel({pages}) {
             }}
           >{page.title}</motion.h1>
           <div style={{zIndex:1}}>
-            <Link href={"/projects/" + page.link}>
+            <Link href={"/projects/" + page.link} legacyBehavior>
               <motion.a
                 key={currentPage + "_desktop"}
                 custom={direction}
@@ -80,10 +80,7 @@ function Carrousel({pages}) {
             }}
           >{page.title === "" ? "COMING SOON" : page.title}</motion.h2>
           <button onClick={() => { currentPage === pageTotal ? setPage([0, 1]) : paginate(1) }} className={styles.carrousel_mobile_next}></button>
-          <Link href={"/projects/" + page.link}>
-            <a className={styles.carrousel_mobile_link}>
-            </a >
-          </Link>
+          <Link href={"/projects/" + page.link} className={styles.carrousel_mobile_link}></Link>
         </div>
         <BackgroundVideo src={page.video} key={page.video} />
         </>
