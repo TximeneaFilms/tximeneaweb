@@ -70,6 +70,14 @@
         }
     }
 
+    &_center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
     &_prev {
         z-index: 1;
         height: 100vh;
@@ -82,16 +90,10 @@
     }
 
     &_title {
-        z-index: 2;
-        position: absolute;
-        inset: 0;
-        margin: auto;
-        width: fit-content;
-        height: fit-content;
         color: white;
         font-size: 15rem;
         pointer-events: none;
-
+        margin: 0;
     }
 
     &_image {

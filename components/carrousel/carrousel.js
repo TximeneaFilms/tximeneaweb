@@ -18,17 +18,17 @@ function Carrousel({pages}) {
     <>
         <div className={styles.carrousel_desktop}>
           <div className={currentPage === 0 ? styles.carrousel_desktop_noClick : styles.carrousel_desktop_prev} onClick={() => paginate(-1)} key={"prev_desktop"} />
-          <motion.h1
-            key={currentPage + "_desktop"}
-            className={styles.carrousel_desktop_title}
-            initial={{ scale: .75, y: 250, opacity: 0 }}
-            animate={{ scale: 1, y: 0, opacity: 1 }}
-            transition={{
-              y: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.65 }
-            }}
-          >{page.title}</motion.h1>
-          <div style={{zIndex:1}}>
+          <div className={styles.carrousel_desktop_center}>
+            <motion.h1
+              key={currentPage + "_desktop"}
+              className={styles.carrousel_desktop_title}
+              initial={{ scale: .75, y: 250, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              transition={{
+                y: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.65 }
+              }}
+            >{page.title}</motion.h1>
             <div className={styles.carrousel_desktop_pageDisplay}>
                   <div className={currentPage === 0 ? styles.carrousel_desktop_pageDisplay_arrow_noDisplay : `${styles.carrousel_desktop_pageDisplay_arrow} ${styles.carrousel_desktop_pageDisplay_arrow_back}`} onClick={() => paginate(-1)} ></div>
                   {pages.map((page, index) => <div className={ currentPage != index ? styles.carrousel_desktop_pageDisplay_item : `${styles.carrousel_desktop_pageDisplay_item} ${styles.carrousel_desktop_pageDisplay_item_active}` } key={ "page_" + index } onClick={() => setPage([index,1])} ></div>)}
