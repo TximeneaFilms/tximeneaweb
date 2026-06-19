@@ -84,6 +84,10 @@
     &_title {
         z-index: 2;
         position: absolute;
+        inset: 0;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
         color: white;
         font-size: 15rem;
         pointer-events: none;
