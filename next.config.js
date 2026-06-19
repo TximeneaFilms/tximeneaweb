@@ -1,23 +1,8 @@
-const { nextI18NextRewrites } = require('next-i18next/rewrites')
-const localeSubpaths = {}
-
+/** @type {import('next').NextConfig} */
 module.exports = {
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  publicRuntimeConfig: {
-    localeSubpaths,
-  },
+  output: 'export',
   images: {
-    loader: 'imgix',
-    path: '',
+    unoptimized: true,
   },
-  optimizeFonts: true,
-  optimizeImages: true,
-  exportPathMap: function() {
-    return {
-      '/': { page: '/' },
-      '/services': { page: '/services' },
-      '/contact': { page: '/contact' },
-      '/about': { page: '/about' }
-    }
-  }
+  trailingSlash: true,
 }

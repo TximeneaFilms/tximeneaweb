@@ -23,7 +23,6 @@ main.App {
   width: 100%;
 }
 
-
 a:visited {
   color:white;
   text-decoration-color: black;
@@ -32,90 +31,6 @@ a:visited {
 a:active {
   color:white;
   text-decoration-color: black;
-}
-
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-
-.bm-burger-bars {
-  background: #FF9900;
-}
-
-.bm-burger-bars-hover {
-  background: #a90000;
-}
-
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-.bm-cross {
-  background: #bdc3c7;
-}
-
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-.bm-menu {
-  background: #101010;
-  padding: 2.5em 1.5em 0;
-  font-size: 2em;
-}
-
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-.bm-item-list {
-  color: #FF9900;
-  padding: 0.8em;
-  text-align: center;
-  text-decoration: none;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.bm-item {
-  text-decoration: none;
-  outline: 0;
-
-  &:visited {
-    color: #FF9900;
-    text-decoration: none;
-    outline: 0;
-  }
-}
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.custom_menu {
-  height: 75vh !important;
-}
-
-.custom_cross {
-  height: 45px !important;
-  width: 45px !important;
-
-  span {
-    right: 10px !important;
-
-    span {
-      width: 6px !important;
-      height: 25px !important;
-    }
-  }
 }
 
 .insta{
@@ -161,6 +76,52 @@ a:active {
   justify-content: space-evenly !important;
 }
 
+.social-desktop {
+  display: block;
+}
+
+.particles-desktop {
+  display: block;
+}
+
+.copy-wrapper {
+  cursor: pointer;
+  h1:hover {
+    color: #FF9900;
+    transition: color 0.3s;
+  }
+}
+
+.contact-hello-mobile,
+.contact-email-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .social-desktop {
+    display: none;
+  }
+
+  .particles-desktop {
+    display: none;
+  }
+
+  .Tilt {
+    width: 50%;
+  }
+
+  .copy-wrapper {
+    display: none;
+  }
+
+  .contact-hello-mobile {
+    display: block;
+  }
+
+  .contact-email-mobile {
+    display: block;
+  }
+}
 
 //LOADER
 #nprogress {

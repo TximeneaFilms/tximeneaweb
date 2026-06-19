@@ -1,13 +1,11 @@
 import {useState} from 'react';
-import { BrowserView, MobileView } from "react-device-detect";
-import { slide as Menu } from 'react-burger-menu'
-import { withTranslation } from '../../i18n'
+import { withTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from './navigation.module.scss'
 import SocialLinks from '../social_links/social_links.js'
 
-function Navigation({ t, i18n}) {
+function Navigation({ t }) {
 
   const router = useRouter()
 
@@ -15,12 +13,10 @@ function Navigation({ t, i18n}) {
 
   let activePage = router.pathname.substring(1) === "" ? "projects" : router.pathname.substring(1);
 
-  const [activeLang, changeActiveLang] = useState("ES")
   const [isOpen, toggleOpen] = useState(false)
 
   return (
     <>
-    <BrowserView>
       <nav className={styles.desktop_navigation}>
         {
           menuItems.map((item, index) =>
@@ -34,23 +30,25 @@ function Navigation({ t, i18n}) {
             </Link >)
         }
       </nav>
-    </BrowserView>
-    <MobileView>
-      <Menu width={'100%'} width={'100%'} itemListClassName={"custom_menu"} crossButtonClassName={"custom_cross"} isOpen={ isOpen } onOpen={ (state) => toggleOpen(!isOpen) } >
+      <div className={styles.mobile_menu_toggle} onClick={() => toggleOpen(!isOpen)}>
+        <span className={isOpen ? styles.open : ""}></span>
+        <span className={isOpen ? styles.open : ""}></span>
+        <span className={isOpen ? styles.open : ""}></span>
+      </div>
+      <div className={`${styles.mobile_menu} ${isOpen ? styles.mobile_menu_open : ''}`}>
         {
           menuItems.map((item, index) =>
             <Link
               href={item === "projects" ? "/" : "/" + item}
               key={index}
               >
-                <a className={activePage === item ? styles.active : ""} onClick={ () => toggleOpen(false) }>
+                <a className={activePage === item ? styles.active : ""} onClick={() => toggleOpen(false)}>
                   {t("navigation." + item)}
                 </a>
             </Link >)
         }
         <SocialLinks/>
-      </Menu>
-    </MobileView>
+      </div>
     </>
   );
 }

@@ -1,5 +1,11 @@
 .links {
   z-index: 10;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1.5vw;
+  top: 3vh;
+
   a {
     display: block;
     height: 30px;
@@ -21,44 +27,8 @@
     color:rgba(255, 255, 255, 0.5);
     cursor:pointer;
   }
-
-  &_desktop{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 1.5vw;
-    top: 3vh;
-  }
-  &_mobile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    &_socialWrap{
-      width: 100%;
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    a {
-      display: block;
-      height: 45px;
-      width: 45px;
-      border-radius: 20px;
-      align-self: center;
-      margin: 15px 0px;
-  
-      &:hover {
-        transition: all 0.5s;
-        transform: scale(1.1)
-      }
-    }
-  }
 }
 
-  .active{
-    color:white !important;
-  }
-  
-  
+.active{
+  color:white !important;
+}

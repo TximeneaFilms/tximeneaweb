@@ -1,8 +1,6 @@
 import {useState, useRef} from 'react'
 import Head from 'next/head'
-import { BrowserView, MobileView, isBrowser } from "react-device-detect";
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { withTranslation } from '../i18n'
+import { withTranslation } from 'react-i18next'
 import BackgroundVideo from '../components/backgroundVideo/backgroundVideo.js'
 import styles from '../styles/Contact.module.scss'
 import { motion } from "framer-motion"
@@ -16,10 +14,10 @@ function Contact({t}) {
     name: '',
     email: 'tximenea.films@gmail.com',
     subject: 'Tximenea web - Contact',
-    honeypot: '', 
+    honeypot: '',
     message: '',
-    replyTo: '@', 
-    accessKey: '3f065880-436d-4cc4-a61d-7665881b34e1' 
+    replyTo: '@',
+    accessKey: '3f065880-436d-4cc4-a61d-7665881b34e1'
   });
 
   const [response, setResponse] = useState({
@@ -31,6 +29,11 @@ function Contact({t}) {
 
   const handleChange = e =>
     setContact({ ...contact, [e.target.name]: e.target.value });
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText('hello@tximeneafilms.com')
+    setIsCopied(true)
+  }
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -70,31 +73,27 @@ function Contact({t}) {
       setStatus("error")
     }
   };
-  
+
   return (
     <>
       <Head>
         <title>Tximenea Films || Contact</title>
-        <description name="description" content="Cuéntanos todo sobre tu proyecto en hello@tximeneafilms.com o llama al +34 623 17 29 68 || +34 617 24 00 23 "/>
+        <meta name="description" content="Cuéntanos todo sobre tu proyecto en hello@tximeneafilms.com o llama al +34 623 17 29 68 || +34 617 24 00 23 "/>
       </Head>
 
-      <motion.section className={isBrowser ? styles.contact : styles.contact_mobile}
-      initial={{x: -1000, opacity:0}} 
+      <motion.section className={styles.contact}
+      initial={{x: -1000, opacity:0}}
       animate={{x: 0, opacity:1, overflowY: "scroll"}}
       transition={{
        x: { type: "spring", stiffness: 150, damping: 20 },
        opacity: { duration: 1 },
        overflowY :{delay:1}
       }}>
-        <div className={isBrowser ? styles.contact_description : styles.contact_mobile_description}> 
-          <BrowserView>
-            <CopyToClipboard text="hello@tximeneafilms.com" onCopy={() => { setIsCopied(true) }}>
-              {isCopied ? <h1 onMouseLeave={() => setIsCopied(false)}>COPIED!</h1> : <h1><span>{t("contact.hello")}</span>@TXIMENEAFILMS.COM!</h1>}
-            </CopyToClipboard>
-          </BrowserView>
-          <MobileView>
-            <h2>{t("contact.hello_mobile")}</h2><div className="mail_icon"></div><h1>HELLO@TXIMENEAFILMS.COM</h1>
-          </MobileView>
+        <div className={styles.contact_description}>
+          <div className="copy-wrapper">
+            {isCopied ? <h1 onMouseLeave={() => setIsCopied(false)}>COPIED!</h1> : <h1 onClick={handleCopy}><span>{t("contact.hello")}</span>@TXIMENEAFILMS.COM!</h1>}
+          </div>
+          <h2 className="contact-hello-mobile">{t("contact.hello_mobile")}</h2><div className="mail_icon"></div><h1 className="contact-email-mobile">HELLO@TXIMENEAFILMS.COM</h1>
           <h3>{t("contact.call_to_action")}</h3>
           <form action='https://api.staticforms.xyz/submit' method='post' onSubmit={handleSubmit} className={styles.contact_form} ref={form}>
             <label htmlFor="email" >Email</label>
@@ -113,14 +112,4 @@ function Contact({t}) {
   )
 }
 
-export async function getStaticProps() {
-  return {
-  props:{
-    namespacesRequired: ['common'],
-  }
-}
-}
-
 export default withTranslation('common')(Contact)
-
-

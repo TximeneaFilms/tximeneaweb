@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import { withTranslation } from '../../i18n'
+import { withTranslation } from 'react-i18next'
 import config from "../../data/particles_config.json"
 import services from "../../data/services_data.json"
 import styles from '../../styles/Service.module.scss'
 import { useRouter } from 'next/router'
-import { isBrowser } from "react-device-detect";
-import Image from 'next/image'
-import Particles from 'react-particles-js';
+import ParticlesBackground from '../../components/ParticlesBackground/ParticlesBackground.js'
 import { motion } from "framer-motion"
 
 function Service({t, particles_config, services_data, icons}) {
@@ -20,19 +18,19 @@ function Service({t, particles_config, services_data, icons}) {
         <>
         <Head>
           <title>{"Tximenea Films || " + service.title.charAt(0) + service.title.toLowerCase().slice(1)}</title>
-          <description name="description" content={service.description}/>
+          <meta name="description" content={service.description}/>
         </Head>
 
         <motion.section className={styles.service}
-            initial={{x: 1000, opacity:0, overflow:"hidden"}} 
+            initial={{x: 1000, opacity:0, overflow:"hidden"}}
             animate={{x: 0, opacity:1, overflowY: "scroll"}}
             transition={{
             x: { type: "spring", stiffness: 150, damping: 20 },
             opacity: { duration: 1 },
             overflowY :{delay:1}
             }}>
-            <div className={isBrowser ? styles.service_wrapper : styles.service_wrapper_mobile}>
-                {isBrowser ? <div className={styles.service_backBtn} onClick={(e) => {e.preventDefault();router.back()}}>&larr; {t("services.go_back")}</div> : <div className="service_backBtn_mobile" onClick={(e) => {e.preventDefault();router.back()}}></div>}
+            <div className={styles.service_wrapper}>
+                <div className={styles.service_backBtn} onClick={(e) => {e.preventDefault();router.back()}}>&larr; {t("services.go_back")}</div>
                 <img src={icons[service.icon]} alt={service.title} className={styles.icon_mobile} width={200} height={200}/>
                 <h1>{t("services.data." + serviceName + ".title")}</h1>
                 <p>{t("services.data." + serviceName + ".description")}</p>
@@ -42,7 +40,9 @@ function Service({t, particles_config, services_data, icons}) {
                     </ul>
                 </div>
             </div>
-            {isBrowser ? <Particles params={particles_config} className={styles.service_background}/> : ""}
+            <div className="particles-desktop">
+              <ParticlesBackground config={particles_config} className={styles.service_background}/>
+            </div>
         </motion.section>
         </>
     )
@@ -78,6 +78,5 @@ export async function getStaticProps() {
         fallback: false,
       }
   }
-
 
 export default withTranslation('common')(Service)
