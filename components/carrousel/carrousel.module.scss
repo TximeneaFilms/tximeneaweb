@@ -47,14 +47,14 @@
             transition: all .3s;
 
             &_back{  
-                background-image: url('/static/icons/prev_arrow.png');
+                background-image: url('#{$base-path}/static/icons/prev_arrow.png');
                 &:hover{
                     transform: translateX(-5px);
                 }
             }
 
             &_next{           
-                background-image: url('/static/icons/next_arrow.png');
+                background-image: url('#{$base-path}/static/icons/next_arrow.png');
                 &:hover{
                     transform: translateX(5px);
                 }
@@ -77,7 +77,7 @@
 
         &:hover {
             cursor: pointer;
-            cursor: url('/static/icons/prev_arrow.png') 50 50, pointer;
+            cursor: url('#{$base-path}/static/icons/prev_arrow.png') 50 50, pointer;
         }
     }
 
@@ -103,7 +103,7 @@
         &:hover {
             transform: scale(1.1);
             cursor: pointer;
-            cursor: url('/static/icons/more.png') 50 50, pointer;
+            cursor: url('#{$base-path}/static/icons/more.png') 50 50, pointer;
         }
     }
 
@@ -129,7 +129,7 @@
 
         &:hover {
             cursor: pointer;
-            cursor: url('/static/icons/next_arrow.png') 50 50, pointer;
+            cursor: url('#{$base-path}/static/icons/next_arrow.png') 50 50, pointer;
             div{
                 opacity: 0;
             }
@@ -168,7 +168,7 @@
             height: 50px;
             width: 100vw;
             background: transparent;
-            background-image: url("/static/icons/down_arrow.png");
+            background-image: url("#{$base-path}/static/icons/down_arrow.png");
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;

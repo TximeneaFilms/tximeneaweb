@@ -39,7 +39,7 @@
     left: 90px;
     height: 100px;
     width: 150px;
-    background-image: url(/static/icons/logoTximenea.png);
+    background-image: url(#{$base-path}/static/icons/logoTximenea.png);
     background-size: contain;
   }
 }

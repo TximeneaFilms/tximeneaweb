@@ -6,6 +6,7 @@ import styles from '../../styles/Service.module.scss'
 import { useRouter } from 'next/router'
 import ParticlesBackground from '../../components/ParticlesBackground/ParticlesBackground.js'
 import { motion } from "framer-motion"
+import { p } from '../../lib/path'
 
 function Service({t, particles_config, services_data, icons}) {
 
@@ -31,7 +32,7 @@ function Service({t, particles_config, services_data, icons}) {
             }}>
             <div className={styles.service_wrapper}>
                 <div className={styles.service_backBtn} onClick={(e) => {e.preventDefault();router.back()}}>&larr; {t("services.go_back")}</div>
-                <img src={icons[service.icon]} alt={service.title} className={styles.icon_mobile} width={200} height={200}/>
+                <img src={p(icons[service.icon])} alt={service.title} className={styles.icon_mobile} width={200} height={200}/>
                 <h1>{t("services.data." + serviceName + ".title")}</h1>
                 <p>{t("services.data." + serviceName + ".description")}</p>
                 <div className={styles.service_wrapper_bulletpoints}>

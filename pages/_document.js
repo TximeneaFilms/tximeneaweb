@@ -3,13 +3,13 @@ import { GA_TRACKING_ID } from '../lib/gtag'
 
 export default class CustomDocument extends Document {
   render() {
+    const basePath = '/tximeneaweb'
     return (
       <Html>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
           <meta name="author" content="Tximenea Films"/>
-          <link rel="base" href="https://tximeneafilms.com"/>
           <link rel="canonical" href="https://tximeneafilms.com"/>
           <meta name="robots" content="index/follow"/>
           <meta name="googlebot" content="index/follow"/>
@@ -33,21 +33,21 @@ export default class CustomDocument extends Document {
           <meta name="twitter:creator" content="Tximenea Films"/>
           <meta name="twitter:image" content="https://tximeneafilms.com"/>
           <meta name="msapplication-TileColor" content="#ffffff"/>
-          <meta name="msapplication-TileImage" content="/static/favicons/ms-icon-144x144.png"/>
+          <meta name="msapplication-TileImage" content={basePath + '/static/favicons/ms-icon-144x144.png'}/>
           <meta name="theme-color" content="#ffffff"/>
-          <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png"/>
-          <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-icon-60x60.png"/>
-          <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-icon-72x72.png"/>
-          <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-icon-76x76.png"/>
-          <link rel="apple-touch-icon" sizes="114x114" href="/static/favicons/apple-icon-114x114.png"/>
-          <link rel="apple-touch-icon" sizes="120x120" href="/static/favicons/apple-icon-120x120.png"/>
-          <link rel="apple-touch-icon" sizes="144x144" href="/static/favicons/apple-icon-144x144.png"/>
-          <link rel="apple-touch-icon" sizes="152x152" href="/static/favicons/apple-icon-152x152.png"/>
-          <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-icon-180x180.png"/>
-          <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicons/android-icon-192x192.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="96x96" href="/static/favicons/favicon-96x96.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png"/>
+          <link rel="apple-touch-icon" sizes="57x57" href={basePath + '/static/favicons/apple-icon-57x57.png'}/>
+          <link rel="apple-touch-icon" sizes="60x60" href={basePath + '/static/favicons/apple-icon-60x60.png'}/>
+          <link rel="apple-touch-icon" sizes="72x72" href={basePath + '/static/favicons/apple-icon-72x72.png'}/>
+          <link rel="apple-touch-icon" sizes="76x76" href={basePath + '/static/favicons/apple-icon-76x76.png'}/>
+          <link rel="apple-touch-icon" sizes="114x114" href={basePath + '/static/favicons/apple-icon-114x114.png'}/>
+          <link rel="apple-touch-icon" sizes="120x120" href={basePath + '/static/favicons/apple-icon-120x120.png'}/>
+          <link rel="apple-touch-icon" sizes="144x144" href={basePath + '/static/favicons/apple-icon-144x144.png'}/>
+          <link rel="apple-touch-icon" sizes="152x152" href={basePath + '/static/favicons/apple-icon-152x152.png'}/>
+          <link rel="apple-touch-icon" sizes="180x180" href={basePath + '/static/favicons/apple-icon-180x180.png'}/>
+          <link rel="icon" type="image/png" sizes="192x192"  href={basePath + '/static/favicons/android-icon-192x192.png'}/>
+          <link rel="icon" type="image/png" sizes="32x32" href={basePath + '/static/favicons/favicon-32x32.png'}/>
+          <link rel="icon" type="image/png" sizes="96x96" href={basePath + '/static/favicons/favicon-96x96.png'}/>
+          <link rel="icon" type="image/png" sizes="16x16" href={basePath + '/static/favicons/favicon-16x16.png'}/>
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

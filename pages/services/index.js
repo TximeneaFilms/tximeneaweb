@@ -6,6 +6,7 @@ import ParticlesBackground from '../../components/ParticlesBackground/ParticlesB
 import config from "../../data/particles_config.json"
 import services from "../../data/services_data.json"
 import { motion } from "framer-motion"
+import { p } from '../../lib/path'
 
 function Services({t, particles_config, services_data, icons}) {
   return (
@@ -29,7 +30,7 @@ function Services({t, particles_config, services_data, icons}) {
           <div className="Tilt" key={index}>
             <Link href={"/services/" + service.title.toLocaleLowerCase().replace(' ', '_')}>
               <div style={{ display: "flex", flexDirection: "column", cursor: "pointer" }}>
-              <img src={icons[service.icon]} alt={t("services.service_titles."+service.title)} style={{alignSelf:"center"}} width={150} height={200}/>
+              <img src={p(icons[service.icon])} alt={t("services.service_titles."+service.title)} style={{alignSelf:"center"}} width={150} height={200}/>
               <h5 style={{ fontSize: "20px", margin: "15px 0 5vh 0", textAlign:"center" }}>{t("services.service_titles."+service.title)}</h5>
               </div>
             </Link>

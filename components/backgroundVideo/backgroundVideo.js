@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { p } from '../../lib/path'
 
 export default function BackgroundVideo({src}) {
   return (
@@ -10,7 +11,7 @@ export default function BackgroundVideo({src}) {
     }}
     >
       <video autoPlay loop muted className="backgroundVideo">
-        <source src={src} />
+        <source src={p(src)} />
       </video>
       <style jsx>{`
       .backgroundVideo {

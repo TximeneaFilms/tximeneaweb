@@ -121,7 +121,7 @@
 }
 
 .mail_icon {
-  background-image: url("/static/icons/mail.png");
+  background-image: url("#{$base-path}/static/icons/mail.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
