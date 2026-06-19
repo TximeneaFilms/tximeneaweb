@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Link from 'next/link'
 import styles from './carrousel.module.scss'
 import BackgroundVideo from '../backgroundVideo/backgroundVideo.js'
 import { motion } from "framer-motion"
@@ -66,20 +65,6 @@ function Carrousel({pages}) {
             </div>
           </div>
           <div className={currentPage === pageTotal ? styles.carrousel_desktop_noClick : styles.carrousel_desktop_next} onClick={() => paginate(1)} key={"next_desktop"} />
-        </div>
-        <div className={styles.carrousel_mobile}>
-          <motion.h2
-            className={styles.carrousel_mobile_title}
-            key={currentPage + "_mobile"}
-            initial={{ scale: .75, y: 250, opacity: 0 }}
-            animate={{ scale: 1, y: 0, opacity: 1 }}
-            transition={{
-              y: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.65 }
-            }}
-          >{page.title === "" ? "COMING SOON" : page.title}</motion.h2>
-          <button onClick={() => { currentPage === pageTotal ? setPage([0, 1]) : paginate(1) }} className={styles.carrousel_mobile_next}></button>
-          <Link href={"/projects/" + page.link} className={styles.carrousel_mobile_link}></Link>
         </div>
         <BackgroundVideo src={page.video} key={page.video} />
         </>
